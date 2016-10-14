@@ -1,0 +1,10 @@
+---
+- unix_groups:
+    tsm:
+      name: tsm
+      gid: 7000
+      state: present
+    patrol:
+      name: patrol
+      gid: 8000
+      state: present

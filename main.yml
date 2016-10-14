@@ -1,0 +1,7 @@
+---
+- hosts: produccion
+  remote_user: uxadm
+  sudo: yes
+
+  roles:
+    - users_base
