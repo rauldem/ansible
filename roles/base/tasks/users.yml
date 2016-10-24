@@ -1,0 +1,13 @@
+---
+- name: Add users
+  user:
+    name={{ item.key }}
+    uid={{ item.value.uid }}
+    group={{ item.value.group }}
+    groups=""
+    comment="{{ item.value.comment }}"
+    password={{ item.value.password }}
+    state={{ item.value.state }}
+    update_password=always
+    shell=/bin/bash
+  with_dict: "{{ unix_users }}"

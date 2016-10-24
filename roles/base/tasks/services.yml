@@ -1,0 +1,12 @@
+---
+## Deshabilitar servicios
+ - service: name={{ item }} state=stopped enabled=no
+   with_items:
+     - NetworkManager
+     - firewalld
+
+## Habilitar servicios
+ - service: name={{ item }} enable=yes state=started
+   with_items:
+     - autofs
+     - rpcbind
